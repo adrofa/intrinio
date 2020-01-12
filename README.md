@@ -5,7 +5,7 @@
 ### `parser`
 <This module is responsible for...>
 
-- `parser.*api*`
+- `parser.`*`api`*
 <br/>Shared code provides easy access to Intrinio-API (US stocks), covers fundamental data with logical tets (to filter out mistakes) and restores some missing data. Most of the calculations are vectorized (with `pandas` / `numpy`), which makes feature-generation process rather fast.
 
 - `parser.company`
