@@ -17,7 +17,7 @@ This module is responsible for getting data from the API, also some of the recei
 </i>
 
 - <code>parser.<b>company</b></code>
-<br/>Contains `Company` class, which downloads data for the company, which `company_id` was provided (reporting forms: balance sheet, income and cash flow statements; filing dates; marketcap; main security price; etc.).
+<br/>Contains `Company` class, which downloads data for the company, which `company_id` was provided (balance sheet, income and cash flow statements, filing dates, marketcap, main security price, etc.).
 <br/><i>
      > I'd highly recommend to study the `MainSecurity` and `FilingDatesClean` methods in more details, because these methods include data preprocessing algorithms for extracting the 'main' stock security (other securities are ignored) and cleaning periods, for which reporting forms were not provided properly.
 </i>
