@@ -26,6 +26,9 @@
 - <code>processor.<b>prices</b></code>
 <br/>Less then in 3 hours, I passed through ML project stages (exploratory data analysis, features preparation, model selection, and model tuning), trained a model, which outperforms naive algorithm, found important data insights.
 
+- processor/<b>RF_FIELDS</b>
+<br/>Less then in 3 hours, I passed through ML project stages (exploratory data analysis, features preparation, model selection, and model tuning), trained a model, which outperforms naive algorithm, found important data insights.
+
 ### <code>technical</code>
 
 - <code>processor.<b>technical</b></code>
