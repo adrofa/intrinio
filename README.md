@@ -4,8 +4,8 @@ Shared code was created in the framework of my research of the US stock market. 
 I beleive somebody could find it usefull to work with [intrinio.com](https://intrinio.com/) API.
 
 ### <code>parser</code>
-This module is responsible for getting data from the API, also some of received data is preprocessed (consider `parser.company`).
-<br/>> <i>To receive data API-key should be provided in `CONFIG_PARSER` dict (which initialized in `technical.config`).</i>
+This module is responsible for getting data from the API, also some of received data is preprocessed (consider `parser.company`).<br/>
+> <i>To receive data API-key should be provided in `CONFIG_PARSER` dict (which initialized in `technical.config`).</i>
 
 - <code>parser.<b>api</b></code>
 Contains `IntrinioAPI` class, which allows to generate html-requests for communication with API. Requests are ppresented in a raw form as they are presented in [API's documentation](https://docs.intrinio.com/documentation/api_v2/getting_started).
