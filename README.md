@@ -7,10 +7,13 @@ I beleive somebody could find it usefull to work with [intrinio.com](https://int
 This module is responsible for getting data from the API, also some of received data is preprocessed (consider `parser.company`). API-key should be provided in `CONFIG_PARSER` dict (which initialized in `technical.config`).</i>
 
 - <code>parser.<b>api</b></code>
-Contains `IntrinioAPI` class, which allows to generate html-requests for communication with API. Requests are ppresented in a raw form as they are presented in [API's documentation](https://docs.intrinio.com/documentation/api_v2/getting_started).
+<br/>Contains `IntrinioAPI` class, which allows to generate html-requests for communication with API. Requests are ppresented in a raw form as they are presented in [API's documentation](https://docs.intrinio.com/documentation/api_v2/getting_started).
 
 - <code>parser.<b>universe</b></code>
-Contains `Universe` class 
+<br/>Contains `Universe` class, which downloads the list of all companies and securities (a company may have more then one security) available with their descriptions. The obtained data could be used a as companies/securities screener (e.g. to filter out banks and isurance companies) for further research.
+<br/><i>
+     > Initialization will take some time, because it generates pretty large amount of requests to obtain all of the companies' securities, hence I recommend to create a dump of the obtained data with `technical.dumper`.
+</i>
 
 - <code>parser.<b>company</b></code>
 Contai
