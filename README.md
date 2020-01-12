@@ -20,16 +20,16 @@
 - <code>processor.<b>fieldsCleaner</b></code>
 <br/>The notebook presents an algorithm identifying groups of sim-cards, which belongs to one personality. The algorithm is based on geo data from the stations, which transmit mobile signal. By submitting this solution I was offered with a DS position in Megafon.
 
-- `fundamentals`
+- <code>processor.<b>fundamentals</b></code>
 <br/>Less then in 3 hours, I passed through ML project stages (exploratory data analysis, features preparation, model selection, and model tuning), trained a model, which outperforms naive algorithm, found important data insights.
 
-- `prices`
+- <code>processor.<b>prices</b></code>
 <br/>Less then in 3 hours, I passed through ML project stages (exploratory data analysis, features preparation, model selection, and model tuning), trained a model, which outperforms naive algorithm, found important data insights.
 
-### `technical`
+### <code>technical</code>
 
-- `config`
+- <code>processor.<b>technical</b></code>
 <br/>Less then in 3 hours, I passed through ML project stages (exploratory data analysis, features preparation, model selection, and model tuning), trained a model, which outperforms naive algorithm, found important data insights.
 
-- `dumper`
+- <code>processor.<b>dumper</b></code>
 <br/>Less then in 3 hours, I passed through ML project stages (exploratory data analysis, features preparation, model selection, and model tuning), trained a model, which outperforms naive algorithm, found important data insights.
