@@ -7,7 +7,8 @@ I hope somebody could find it usefull to work with [intrinio.com](https://intrin
 <This module is responsible for...>
 
 - <code>parser.<b>api</b></code>
-<br/>Shared code provides easy access to Intrinio-API (US stocks), covers fundamental data with logical tets (to filter out mistakes) and restores some missing data. Most of the calculations are vectorized (with `pandas` / `numpy`), which makes feature-generation process rather fast.
+Contains `IntrinioAPI` class, which allows to generate html-requests for communication with API. Requests are ppresented in a raw form with links to [API's documentation](https://docs.intrinio.com/documentation/api_v2/getting_started). To initialize an object of `IntrinioAPI` an API-key should be provided.
+> To use other modules API-key chould be provided in `CONFIG_PARSER` dict of `technical.config` module (see below).
 
 - <code>parser.<b>company</b></code>
 <br/>Shared code provides easy access to Intrinio-API (US stocks), covers fundamental data with logical tets (to filter out mistakes) and restores some missing data. Most of the calculations are vectorized (with `pandas` / `numpy`), which makes feature-generation process rather fast.
@@ -32,8 +33,8 @@ I hope somebody could find it usefull to work with [intrinio.com](https://intrin
 
 ### <code>technical</code>
 
-- <code>processor.<b>technical</b></code>
+- <code>technical.<b>config</b></code>
 <br/>Less then in 3 hours, I passed through ML project stages (exploratory data analysis, features preparation, model selection, and model tuning), trained a model, which outperforms naive algorithm, found important data insights.
 
-- <code>processor.<b>dumper</b></code>
+- <code>technical.<b>dumper</b></code>
 <br/>Less then in 3 hours, I passed through ML project stages (exploratory data analysis, features preparation, model selection, and model tuning), trained a model, which outperforms naive algorithm, found important data insights.
