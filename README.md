@@ -3,6 +3,7 @@
 Shared code was created in the framework of my research of the US stock market. I've been using it as an `import` in Jupyter Notebook (inasmuch I find this instrument the most comfortable for **research** purposes), but I beleive that the structure of the project will allow to apply it also in **production**, at least after (hopefully) minor modifications.
 I beleive somebody could find it usefull to work with [intrinio.com](https://intrinio.com/) API.
 
+
 ### <code>parser</code>
 This module is responsible for getting data from the API, also some of the received data is preprocessed (consider `parser.company`). API-key should be provided in `CONFIG_PARSER` dict (which initialized in `technical.config`).</i>
 
@@ -18,10 +19,8 @@ This module is responsible for getting data from the API, also some of the recei
 - <code>parser.<b>company</b></code>
 <br/>Contains `Company` class, which downloads data for the company, which `company_id` was provided (reporting forms: balance sheet, income and cash flow statements; filing dates; marketcap; main security price; etc.).
 <br/><i>
-     > I'd highly recommend to study `MainSecurity` and `FilingDatesClean` methods in more details, cause these methods include data prreprocessing algorithms for extracting the 'main' stock security (other securities are ignored) and cleaning periods, for which reporting forms were not provided properly.
+     > I'd highly recommend to study the `MainSecurity` and `FilingDatesClean` methods in more details, because these methods include data preprocessing algorithms for extracting the 'main' stock security (other securities are ignored) and cleaning periods, for which reporting forms were not provided properly.
 </i>
-
-
 
 
 ### <code>processor</code>
