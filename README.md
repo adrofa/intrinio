@@ -1,15 +1,18 @@
-## Data Science Profile - Artem Drofa <font color='red'>\[UNDER CONSTRUCTION\]</font>
+## XXX
 
-My CV is available here: [ENG](https://github.com/adrofa/profile/blob/master/Artem_Drofa_CV_ENG.pdf), [RUS](https://github.com/adrofa/profile/blob/master/Artem_Drofa_CV_RUS.pdf).
+<Why this was created>
 
-### Pet Project
-The project is dedicated to stocks selection for conservative buy-and-hold protfolio. Some code created in the framework of this project is shared below.
+### Parser
+<This module is responsible for...>
 
-- **Code for Financial Data Processing** *(api: [intrinio.com](https://intrinio.com))* | jan-2020 | [GitHub Repository](https://github.com/adrofa/intrinio)
+- `api`
 <br/>Shared code provides easy access to Intrinio-API (US stocks), covers fundamental data with logical tets (to filter out mistakes) and restores some missing data. Most of the calculations are vectorized (with `pandas` / `numpy`), which makes feature-generation process rather fast.
-<br/><i>
-     > #python #pyFiles # #dataProcessing #multiprocessing #objectOrientedProgramming #api
-</i></font>
+
+- **company**
+<br/>Shared code provides easy access to Intrinio-API (US stocks), covers fundamental data with logical tets (to filter out mistakes) and restores some missing data. Most of the calculations are vectorized (with `pandas` / `numpy`), which makes feature-generation process rather fast.
+
+- **universe**
+<br/>Shared code provides easy access to Intrinio-API (US stocks), covers fundamental data with logical tets (to filter out mistakes) and restores some missing data. Most of the calculations are vectorized (with `pandas` / `numpy`), which makes feature-generation process rather fast.
 
 
 ### Different Tasks
