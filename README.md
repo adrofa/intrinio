@@ -1,6 +1,6 @@
-## Code to Work with Intrinio.com API 
+## Code to Work with [Intrinio.com](https://intrinio.com/) API 
 
-Shared code was created in the framework of my research of the US stock market. I've been using it as an `import` in Jupyter Notebooks (inasmuch I find this instrument the most comfortable for _research_), but I beleive that the structure of the project will allow to apply it also in _production_ (at least, with minor changes).
+Shared code was created in the framework of my research of the US stock market. I've been using it as an `import` in Jupyter Notebooks (inasmuch I find this instrument the most comfortable for <u>research</u>), but I beleive that the structure of the project will allow to apply it also in <u>production</u> (at least, with minor changes).
 I hope somebody could find it usefull to work with [intrinio.com](https://intrinio.com/) API.
 
 ### <code>parser</code>
