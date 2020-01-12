@@ -2,22 +2,22 @@
 
 <Why this was created>
 
-### `parser`
+### <code>parser</code>
 <This module is responsible for...>
 
 - <code>parser.<b>api</b></code>
 <br/>Shared code provides easy access to Intrinio-API (US stocks), covers fundamental data with logical tets (to filter out mistakes) and restores some missing data. Most of the calculations are vectorized (with `pandas` / `numpy`), which makes feature-generation process rather fast.
 
-- `parser.company`
+- <code>parser.<b>company</b></code>
 <br/>Shared code provides easy access to Intrinio-API (US stocks), covers fundamental data with logical tets (to filter out mistakes) and restores some missing data. Most of the calculations are vectorized (with `pandas` / `numpy`), which makes feature-generation process rather fast.
 
-- `parser.universe`
+- <code>parser.<b>universe</b></code>
 <br/>Shared code provides easy access to Intrinio-API (US stocks), covers fundamental data with logical tets (to filter out mistakes) and restores some missing data. Most of the calculations are vectorized (with `pandas` / `numpy`), which makes feature-generation process rather fast.
 
 
-### `processor`
+### <code>processor</code>
 
-- `fieldsCleaner`
+- <code>processor.<b>fieldsCleaner</b></code>
 <br/>The notebook presents an algorithm identifying groups of sim-cards, which belongs to one personality. The algorithm is based on geo data from the stations, which transmit mobile signal. By submitting this solution I was offered with a DS position in Megafon.
 
 - `fundamentals`
