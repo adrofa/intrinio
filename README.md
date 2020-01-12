@@ -1,22 +1,25 @@
 ## Code to Work with [Intrinio.com](https://intrinio.com/) API 
 
-Shared code was created in the framework of my research of the US stock market. I've been using it as an `import` in Jupyter Notebook (inasmuch I find this instrument the most comfortable for **research** purposes), but I beleive that the structure of the project will allow to apply it also in **production**, at least after (hopefully) minor changes applied.
+Shared code was created in the framework of my research of the US stock market. I've been using it as an `import` in Jupyter Notebook (inasmuch I find this instrument the most comfortable for **research** purposes), but I beleive that the structure of the project will allow to apply it also in **production**, at least after (hopefully) minor modifications.
 I beleive somebody could find it usefull to work with [intrinio.com](https://intrinio.com/) API.
 
 ### <code>parser</code>
-This module is responsible for getting data from the API, also some of received data is preprocessed (consider `parser.company`). API-key should be provided in `CONFIG_PARSER` dict (which initialized in `technical.config`).</i>
+This module is responsible for getting data from the API, also some of the received data is preprocessed (consider `parser.company`). API-key should be provided in `CONFIG_PARSER` dict (which initialized in `technical.config`).</i>
 
 - <code>parser.<b>api</b></code>
-<br/>Contains `IntrinioAPI` class, which allows to generate html-requests for communication with API. Requests are ppresented in a raw form as they are presented in [API's documentation](https://docs.intrinio.com/documentation/api_v2/getting_started).
+<br/>Contains `IntrinioAPI` class, which allows to generate html-requests for communication with API. Requests are presented in a raw form as they are presented in [API's documentation](https://docs.intrinio.com/documentation/api_v2/getting_started).
 
 - <code>parser.<b>universe</b></code>
-<br/>Contains `Universe` class, which downloads the list of all companies and securities (a company may have more then one security) available with their descriptions. The obtained data could be used a as companies/securities screener (e.g. to filter out banks and isurance companies) for further research.
+<br/>Contains `Universe` class, which downloads the list of all available companies and securities (a company may have more then one security) with their descriptions. The obtained data could be used as a companies/securities screener (e.g. to filter out banks and isurance companies) for further research.
 <br/><i>
      > Initialization will take some time, because it generates pretty large amount of requests to obtain all of the companies' securities, hence I recommend to create a dump of the obtained data with `technical.dumper`.
 </i>
 
 - <code>parser.<b>company</b></code>
-Contai
+<br/>Contains `Company` class, which creates downloads data to the company, which `company_id` was provided: Balance Sheet, Income Statement, Cash Flow Statement, filing dates, marketcap, main security price.
+<br/><i>
+     > I'd highly recommend to study `MainSecurity` and `FilingDatesClean` methods in more details, cause these methods include algorithms for extracting main share (other securities are ignored) for the company and cleaning periods, for which reporting forms were not provided properly.
+</i>
 
 
 
