@@ -1,20 +1,22 @@
 ## Code to Work with [Intrinio.com](https://intrinio.com/) API 
 
-Shared code was created in the framework of my research of the US stock market. I've been using it as an `import` in Jupyter Notebooks (inasmuch I find this instrument the most comfortable for **research**), but I beleive that the structure of the project will allow to apply it also in **production** (at least, with minor changes).
-I hope somebody could find it usefull to work with [intrinio.com](https://intrinio.com/) API.
+Shared code was created in the framework of my research of the US stock market. I've been using it as an `import` in Jupyter Notebook (inasmuch I find this instrument the most comfortable for **research** purposes), but I beleive that the structure of the project will allow to apply it also in **production**, at least after (hopefully) minor changes applied.
+I beleive somebody could find it usefull to work with [intrinio.com](https://intrinio.com/) API.
 
 ### <code>parser</code>
-<This module is responsible for...>
+This module is responsible for getting data from the API, also some of received data is preprocessed (consider `parser.company`).
+> <i>To receive data API-key should be provided in `CONFIG_PARSER` dict (which initialized in `technical.config`).</i>
 
 - <code>parser.<b>api</b></code>
-Contains `IntrinioAPI` class, which allows to generate html-requests for communication with API. Requests are ppresented in a raw form with links to [API's documentation](https://docs.intrinio.com/documentation/api_v2/getting_started). To initialize an object of `IntrinioAPI` an API-key should be provided.
-> To use other modules API-key chould be provided in `CONFIG_PARSER` dict of `technical.config` module (see below).
-
-- <code>parser.<b>company</b></code>
-<br/>Shared code provides easy access to Intrinio-API (US stocks), covers fundamental data with logical tets (to filter out mistakes) and restores some missing data. Most of the calculations are vectorized (with `pandas` / `numpy`), which makes feature-generation process rather fast.
+Contains `IntrinioAPI` class, which allows to generate html-requests for communication with API. Requests are ppresented in a raw form as they are presented in [API's documentation](https://docs.intrinio.com/documentation/api_v2/getting_started).
 
 - <code>parser.<b>universe</b></code>
-<br/>Shared code provides easy access to Intrinio-API (US stocks), covers fundamental data with logical tets (to filter out mistakes) and restores some missing data. Most of the calculations are vectorized (with `pandas` / `numpy`), which makes feature-generation process rather fast.
+Contains `Universe` class 
+
+- <code>parser.<b>company</b></code>
+Contai
+
+
 
 
 ### <code>processor</code>
