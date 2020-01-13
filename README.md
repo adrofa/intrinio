@@ -13,7 +13,7 @@ This module is responsible for getting data from the API, also some of the recei
 - <code>parser.<b>universe</b></code>
 <br/>Contains `Universe` class, which downloads the list of all available companies and securities (a company may have more then one security) with their descriptions. Obtained data could be used as a companies/securities screener (e.g. to filter out banks and isurance companies) for further research.
 <br/><i>
-> Initialization will take some time, because it generates pretty large amount of requests to obtain all of the companies' securities, hence I recommend to create a dump of the created `Universe` instance (e.g. using `technical.dumper`).
+     > Initialization will take some time, because it generates pretty large amount of requests to obtain all of the companies' securities, hence I recommend to create a dump of the created `Universe` instance (e.g. using `technical.dumper`).
 </i>
 
 - <code>parser.<b>company</b></code>
@@ -27,9 +27,7 @@ This module is responsible for getting data from the API, also some of the recei
 
 - <code>processor.<b>fieldsCleaner</b></code>
 `CollectCleanFields` is the main function of this module. It takes a `Company` class instance and returns `pandas.DataFrame` instance with company's fundamentals. The fundamentals passes several logical tests (the ones, which have not passed the tests, will be filled with `numpy.nan`). Applied logical tests consists of control sums for sections of reporting forms (e.g. 'Total Liabilities' should be equal to sum of 'Current Liabilities' and 'Non-current Liabilities'). 
-<br/><i>
-     > The returned data should be additionally tested (for mistakes) in accordance with further usage purposes.
-</i>
+     > <i>The returned data should be additionally tested (for mistakes) in accordance with further usage purposes.</i>
 
 - <code>processor.<b>fundamentals</b></code>
 
