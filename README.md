@@ -29,16 +29,18 @@ Contains methods for fundamentals extraction and modification - lags and/or stat
 
 
 - <code>processor.<b>prices</b></code>
-Contains method for extracting market capitalization (missing values were restored from main share price data) and a method, which returns a mapper for matching fundamentals with prices.
+Contains method for extracting market capitalization (missing values are restored from main share price data) and a method, which returns a mapper for matching fundamentals with prices.
      > <i>Main share price (including version adjusted on dividends and splits) could be extracted from `Company` instance (`mainSecurityPrice` attribute).</i>
 
 - processor/<b>RF_FIELDS</b>
+Contains 2 files needed for fundamentals extracting and cleaning. `RF_FIELDS.xlsx` file could be used as a reference for existing fundamentals fields.
 
 
 ### <code>technical</code>
 
 - <code>technical.<b>config</b></code>
-<br/>Less then in 3 hours, I passed through ML project stages (exploratory data analysis, features preparation, model selection, and model tuning), trained a model, which outperforms naive algorithm, found important data insights.
+Contains 2 dicts with parameters for the code.
+     > Please, provide your API-key in `CONFIG_PARSER ` dict and path to `processor/RF_FIELDS` in `CONFIG_PROCESSOR` dict. 
 
 - <code>technical.<b>dumper</b></code>
-<br/>Less then in 3 hours, I passed through ML project stages (exploratory data analysis, features preparation, model selection, and model tuning), trained a model, which outperforms naive algorithm, found important data insights.
+Contains `Dumper` class, which is just a light wrap around [`pickle`](https://docs.python.org/3/library/pickle.html).
