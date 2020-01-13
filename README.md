@@ -8,16 +8,14 @@ I beleive somebody could find this code usefull to work with [intrinio.com](http
 This module is responsible for getting data from the API, also some of the received data is preprocessed (consider `parser.company`). API-key should be provided in `CONFIG_PARSER` dict (which initialized in `technical.config`).</i>
 
 - <code>parser.<b>api</b></code>
-<br/>Contains `IntrinioAPI` class, which allows to generate html-requests for communication with API. Requests are presented in a raw form as they are presented in [API's documentation](https://docs.intrinio.com/documentation/api_v2/getting_started).
+     Contains `IntrinioAPI` class, which allows to generate html-requests for communication with API. Requests are presented in a raw form as they are presented in [API's documentation](https://docs.intrinio.com/documentation/api_v2/getting_started).
 
 - <code>parser.<b>universe</b></code>
-<br/>Contains `Universe` class, which downloads the list of all available companies and securities (a company may have more then one security) with their descriptions. Obtained data could be used as a companies/securities screener (e.g. to filter out banks and isurance companies) for further research.
-<br/><i>
-     > Initialization will take some time, because it generates pretty large amount of requests to obtain all of the companies' securities, hence I recommend to create a dump of the created `Universe` instance (e.g. using `technical.dumper`).
-</i>
+     Contains `Universe` class, which downloads the list of all available companies and securities (a company may have more then one security) with their descriptions. Obtained data could be used as a companies/securities screener (e.g. to filter out banks and isurance companies) for further research.
+     > <i>Initialization will take some time, because it generates pretty large amount of requests to obtain all of the companies' securities, hence I recommend to create a dump of the created `Universe` instance (e.g. using `technical.dumper`).</i>
 
 - <code>parser.<b>company</b></code>
-<br/>Contains `Company` class, which downloads data for the company, which `company_id` was provided (balance sheet, income and cash flow statements (all of the statements are [standardized](https://docs.intrinio.com/documentation/web_api/get_fundamental_standardized_financials_v2?values=eyJpZCI6IkFBUEwtaW5jb21lX3N0YXRlbWVudC0yMDE4LVExIn0%3D) and [LTM](https://www.investopedia.com/terms/l/ltm.asp)), filing dates, marketcap, main security price, etc.).
+     Contains `Company` class, which downloads data for the company, which `company_id` was provided (balance sheet, income and cash flow statements (all of the statements are [standardized](https://docs.intrinio.com/documentation/web_api/get_fundamental_standardized_financials_v2?values=eyJpZCI6IkFBUEwtaW5jb21lX3N0YXRlbWVudC0yMDE4LVExIn0%3D) and [LTM](https://www.investopedia.com/terms/l/ltm.asp)), filing dates, marketcap, main security price, etc.).
      > <i>`MainSecurity` includes data preprocessing algorithms for extracting the 'main' share, other securities (e.g. bonds) are ignored. `FilingDatesClean` filters out periods, for which reporting forms were not provided properly.</i>
 
 
