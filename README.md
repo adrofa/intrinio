@@ -1,6 +1,6 @@
 ## Code to Work with [Intrinio.com](https://intrinio.com/) API 
 
-Shared code was created in the framework of my research of the US stock market. I've been using it as an `import` in Jupyter Lab and/or Notebook (inasmuch I find these instruments the most comfortable for **research** purposes), but I beleive that the structure of the project will allow to apply it also in **production**, at least after some modifications.
+Shared code was created in the framework of my research of the US stock market. I've been using it as an `import` in Jupyter Lab and/or Notebook, inasmuch I find these instruments the most comfortable for **research** purposes. But I tried to write a code which won't need complete refactoring on implementation into **production** stage. 
 I beleive somebody could find this code usefull to work with [intrinio.com](https://intrinio.com/) API.
 
 
