@@ -8,14 +8,13 @@ I beleive somebody could find this code usefull to work with [intrinio.com](http
 This module is responsible for getting data from the API, also some of the received data is preprocessed (consider `parser.company`). API-key should be provided in `CONFIG_PARSER` dict (which initialized in `technical.config`).</i>
 
 - <code>parser.<b>api</b></code>
-     Contains `IntrinioAPI` class, which allows to generate html-requests for communication with API. Requests are presented in a raw form as they are presented in [API's documentation](https://docs.intrinio.com/documentation/api_v2/getting_started).
+Contains `IntrinioAPI` class, which allows to generate html-requests for communication with API. Requests are presented in a raw form as they are presented in [API's documentation](https://docs.intrinio.com/documentation/api_v2/getting_started).
 
-- <code>parser.<b>universe</b></code>
-     Contains `Universe` class, which downloads the list of all available companies and securities (a company may have more then one security) with their descriptions. Obtained data could be used as a companies/securities screener (e.g. to filter out banks and isurance companies) for further research.
+- <code>parser.<b>universe</b></code>Contains `Universe` class, which downloads the list of all available companies and securities (a company may have more then one security) with their descriptions. Obtained data could be used as a companies/securities screener (e.g. to filter out banks and isurance companies) for further research.
      > <i>Initialization will take some time, because it generates pretty large amount of requests to obtain all of the companies' securities, hence I recommend to create a dump of the created `Universe` instance (e.g. using `technical.dumper`).</i>
 
 - <code>parser.<b>company</b></code>
-     Contains `Company` class, which downloads data for the company, which `company_id` was provided (balance sheet, income and cash flow statements (all of the statements are [standardized](https://docs.intrinio.com/documentation/web_api/get_fundamental_standardized_financials_v2?values=eyJpZCI6IkFBUEwtaW5jb21lX3N0YXRlbWVudC0yMDE4LVExIn0%3D) and [LTM](https://www.investopedia.com/terms/l/ltm.asp)), filing dates, marketcap, main security price, etc.).
+Contains `Company` class, which downloads data for the company, which `company_id` was provided (balance sheet, income and cash flow statements (all of the statements are [standardized](https://docs.intrinio.com/documentation/web_api/get_fundamental_standardized_financials_v2?values=eyJpZCI6IkFBUEwtaW5jb21lX3N0YXRlbWVudC0yMDE4LVExIn0%3D) and [LTM](https://www.investopedia.com/terms/l/ltm.asp)), filing dates, marketcap, main security price, etc.).
      > <i>`MainSecurity` includes data preprocessing algorithms for extracting the 'main' share, other securities (e.g. bonds) are ignored. `FilingDatesClean` filters out periods, for which reporting forms were not provided properly.</i>
 
 
@@ -23,9 +22,10 @@ This module is responsible for getting data from the API, also some of the recei
 
 - <code>processor.<b>fieldsCleaner</b></code>
 `CollectCleanFields` is the main function of this module. It takes a `Company` class instance and returns `pandas.DataFrame` instance with company's fundamentals. The fundamentals passes several logical tests (the ones, which have not passed the tests, will be filled with `numpy.nan`). Applied logical tests consists of control sums for sections of reporting forms (e.g. 'Total Liabilities' should be equal to sum of 'Current Liabilities' and 'Non-current Liabilities'). 
-     > <i>The returned data should be additionally tested (for mistakes) in accordance with further usage purposes.</i>
+     > <i>The returned data should be additionally tested (for mistakes) in accordance with further usage purposes (signs ± are incosistent in interest expense, dividends, Sales and probably in some other fields).</i>
 
 - <code>processor.<b>fundamentals</b></code>
+
 
 
 - <code>processor.<b>prices</b></code>
