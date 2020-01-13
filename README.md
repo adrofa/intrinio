@@ -21,11 +21,11 @@ Contains `Company` class, which downloads data for the company, which `company_i
 ### <code>processor</code>
 
 - <code>processor.<b>fieldsCleaner</b></code>
-`CollectCleanFields` is the main function of this module. It takes a `Company` class instance and returns `pandas.DataFrame` instance with company's fundamentals. The fundamentals passes several logical tests (the ones, which have not passed the tests, will be filled with `numpy.nan`). Applied logical tests consists of control sums for sections of reporting forms (e.g. 'Total Liabilities' should be equal to sum of 'Current Liabilities' and 'Non-current Liabilities'). 
-     > <i>The returned data should be additionally tested (for mistakes) in accordance with further usage purposes (signs ± are incosistent in interest expense, dividends, Sales and probably in some other fields).</i>
+`CollectCleanFields` is the main function of this module. It takes a `Company` class instance and returns `pandas.DataFrame` instance with company's fundamentals. The fundamentals pass several logical tests (the ones, which have not passed the tests, will be filled with `numpy.nan`). Applied logical tests consist of control sums for sections of reporting forms (e.g. 'Total Liabilities' should be equal to sum of 'Current Liabilities' and 'Non-current Liabilities'). 
+     > <i>The returned data may be additionally tested (for mistakes) in accordance with further usage purposes (signs ± are incosistent in interest expense, dividends, Sales and probably in some other fields, but mistakes of this kind are rare).</i>
 
 - <code>processor.<b>fundamentals</b></code>
-
+Contains methods for fundamentals extraction and modification - lags and/or stats (mean, median, max, min) could be applied. Also some 'synthetic' fundamentals are added: 
 
 
 - <code>processor.<b>prices</b></code>
