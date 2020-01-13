@@ -18,9 +18,7 @@ This module is responsible for getting data from the API, also some of the recei
 
 - <code>parser.<b>company</b></code>
 <br/>Contains `Company` class, which downloads data for the company, which `company_id` was provided (balance sheet, income and cash flow statements (all of the statements are [standardized](https://docs.intrinio.com/documentation/web_api/get_fundamental_standardized_financials_v2?values=eyJpZCI6IkFBUEwtaW5jb21lX3N0YXRlbWVudC0yMDE4LVExIn0%3D) and [LTM](https://www.investopedia.com/terms/l/ltm.asp)), filing dates, marketcap, main security price, etc.).
-<br/><i>
-     > `MainSecurity` includes data preprocessing algorithms for extracting the 'main' share, other securities (e.g. bonds) are ignored. `FilingDatesClean` filters out periods, for which reporting forms were not provided properly.
-</i>
+     > <i>`MainSecurity` includes data preprocessing algorithms for extracting the 'main' share, other securities (e.g. bonds) are ignored. `FilingDatesClean` filters out periods, for which reporting forms were not provided properly.</i>
 
 
 ### <code>processor</code>
