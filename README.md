@@ -13,7 +13,7 @@ This module is responsible for getting data from the API, also some of the recei
 - <code>parser.<b>universe</b></code>
 <br/>Contains `Universe` class, which downloads the list of all available companies and securities (a company may have more then one security) with their descriptions. Obtained data could be used as a companies/securities screener (e.g. to filter out banks and isurance companies) for further research.
 <br/><i>
-     > Initialization will take some time, because it generates pretty large amount of requests to obtain all of the companies' securities, hence I recommend to create a dump of the created `Universe` instance (e.g. using `technical.dumper`).
+> Initialization will take some time, because it generates pretty large amount of requests to obtain all of the companies' securities, hence I recommend to create a dump of the created `Universe` instance (e.g. using `technical.dumper`).
 </i>
 
 - <code>parser.<b>company</b></code>
