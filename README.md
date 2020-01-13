@@ -25,14 +25,15 @@ Contains `Company` class, which downloads data for the company, which `company_i
      > <i>The returned data may be additionally tested (for mistakes) in accordance with further usage purposes (signs ± are incosistent in interest expense, dividends, Sales and probably in some other fields, but mistakes of this kind are rare).</i>
 
 - <code>processor.<b>fundamentals</b></code>
-Contains methods for fundamentals extraction and modification - lags and/or stats (mean, median, max, min) could be applied. Also some 'synthetic' fundamentals are added: 
+Contains methods for fundamentals extraction and modification - lags and/or stats (mean, median, max, min) for the provided period. Also some 'synthetic' fundamentals are added: Tangible Assets, Book Value, EBIT, EBITDA, FCFF, Financial Debt, Financial Debt Cost,  Net Debt, Part EV (EV minus market capitalization). 
 
 
 - <code>processor.<b>prices</b></code>
-<br/>Less then in 3 hours, I passed through ML project stages (exploratory data analysis, features preparation, model selection, and model tuning), trained a model, which outperforms naive algorithm, found important data insights.
+Contains method for extracting market capitalization (missing values were restored from main share price data) and a method, which returns a mapper for matching fundamentals with prices.
+     > <i>Main share price (including version adjusted on dividends and splits) could be extracted from `Company` instance (`mainSecurityPrice` attribute).</i>
 
 - processor/<b>RF_FIELDS</b>
-<br/>Less then in 3 hours, I passed through ML project stages (exploratory data analysis, features preparation, model selection, and model tuning), trained a model, which outperforms naive algorithm, found important data insights.
+
 
 ### <code>technical</code>
 
