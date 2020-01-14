@@ -1,3 +1,5 @@
+![Code to Work with Intrinio.com API](https://github.com/adrofa/intrinio/blob/master/intrinio_header.png)
+
 ## Code to Work with [Intrinio.com](https://intrinio.com/) API
 
 Shared code was created in the framework of my research of the US stock market. I've been using it as an `import` in Jupyter Lab and/or Notebook, inasmuch I find these instruments the most comfortable for **research** purposes. But I tried to write a code which won't need complete refactoring on implementation into **production** stage. 
